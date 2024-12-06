@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/src/assets/fonts/gilroy-bold.ttf");
+    
+}
+
+@font-face {
+    font-family: "Gilroy-semibold";
+    src: url("assets/fonts/gilroy-semibold.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Gilroy-regular";
+    src: url("assets/fonts/gilroy-regular.ttf");
+}
+
+@font-face {
+    font-family: "Gilroy-medium";
+    src: url("assets/fonts/gilroy-medium.ttf");
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+
+    .main__inner{
+        margin: 0 auto;
+        width: 688px;
+
+        .Header__menu{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .main__Text{
+        margin-top: 24px;
+    }
+
+    .main__Filters{
+        margin-top: 32px;
+    }
+
+    .main__Catalog{
+        max-width: 1064px;
+        margin: 0 auto;
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .main__List{
+        margin-top: 32px;
+    }
+
+    .main__Footer{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 260px;
+        border-top: 2px solid #f5f5f5;
+    }
+
+    .main__Menu{
+        position: fixed;
+        z-index: 2;
+        bottom: 16px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

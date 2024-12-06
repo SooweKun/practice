@@ -1,0 +1,28 @@
+.List__inner{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+    .List__button{
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background-color: #f5f5f5;
+        color: black;
+        border: 2px solid #CCCCCC;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Gilroy-regular";
+        font-size: 14px;
+
+        &:hover{
+            border:2px solid #593780;
+        }
+
+        >p{
+            font-family: "Gilroy-regular";
+        }
+    }
+}

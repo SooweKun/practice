@@ -1,0 +1,54 @@
+/* Обертка для поиска */
+.search_wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100px; /* Ширина из className */
+  }
+  
+  /* Скрытый текст для доступности */
+  .visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  /* Иконка обертка */
+  .icon_wrapper {
+    position: absolute;
+    top: 20px; /* Центрирование по вертикали */
+    left: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    padding-left: 8px; /* Примерный отступ для позиционирования */
+  }
+  
+  .icon {
+    width: 24px; /* Размер иконки из className */
+    height: 24px;
+    fill: #000000; /* Цвет из className */
+  }
+  
+  /* Поле ввода */
+  .search_input {
+    width: 100px; /* Ширина из className */
+    height: 40px; /* Высота из className */
+    padding: 9px 12px 9px 36px; /* Отступ для текста и иконки */
+    font-size: 12px; /* Размер шрифта из className */
+    font-weight: bold; /* Жирность текста из className */
+    color: #000000; /* Цвет текста */
+    background-color: #f3f4f6; /* Цвет фона (заменяет bg-primary) */
+    border: none; /* Без рамки */
+    outline: none; /* Без контура */
+    border-radius: 8px; /* Радиус скругления */
+  }
+  
+  .search_input::placeholder {
+    color: #000000; /* Цвет placeholder из className */
+  }
+  

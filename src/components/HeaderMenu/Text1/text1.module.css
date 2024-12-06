@@ -1,0 +1,36 @@
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .text_p1{
+        font-size: 12px;
+        color: #000000;
+        font-family: "Gilroy-regular";
+        width: 192px;
+        height: 15px;
+        display: flex;
+        gap: 8px;
+
+        span{
+            width: 10px;
+        }
+    }
+
+    .text_h1{
+        font-size: 24px;
+        margin-top: 24px;
+        font-family: "Gilroy-semibold";
+    }
+
+    .text_p2{
+        font-size: 12px;
+        color: #000000;
+        width: 368px;
+        height: 28px;
+        margin-top: 16px;
+        text-align: center;
+        font-family: "Gilroy-regular";
+    }
+}

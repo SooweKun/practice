@@ -1,0 +1,29 @@
+.Karzina{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+
+    .Karzina__inner{
+        max-width: 1064px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main__Menu{
+        position: fixed;
+        z-index: 2;
+        bottom: 16px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .main__Footer{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 60px;
+        border-top: 2px solid #f5f5f5;
+    }
+}

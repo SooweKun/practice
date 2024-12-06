@@ -1,0 +1,15 @@
+.Warning__inner{
+    width: 1000px;
+    height: 600px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Warning__h1{
+        font-size: 30px;
+        font-family: "Gilroy-semibold";
+    }
+}

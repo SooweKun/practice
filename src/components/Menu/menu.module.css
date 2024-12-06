@@ -1,0 +1,17 @@
+.menu__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    width: 208px;
+    height: 48px;
+    background-color: #593780;
+    border-radius: 18px;
+    border: 2px solid #E1E1E1;
+
+    .menu__inner_img{
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+}

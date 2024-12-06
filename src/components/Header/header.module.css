@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 688px;
+    margin: 0 auto;
+    font: bold;
+
+    .header__left_menu{
+        display: flex;
+        gap: 12px;
+        margin-top: 28px;
+        align-items: center;
+    }
+
+    .header_img{
+        width: 87px;
+        height: 100px;
+        margin-top: 32px;
+    }
+
+    .header__right_menu{
+        display: flex;
+        gap: 12px;
+        margin-top: 26px;
+        align-items: center;
+    }
+}

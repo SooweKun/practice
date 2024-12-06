@@ -1,0 +1,27 @@
+.header__menu{
+    margin: 0 auto;
+    max-width: 688px;
+    width: 568px;
+    height: 40px;
+    margin-top: 16px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    .header__menu_link{
+        display: flex;
+        text-decoration: none;
+        color: #000000;
+        font-size: 13px;
+        font-family: "Gilroy-medium";
+
+        &:hover{
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            color: #593780;
+        }
+    }
+}
