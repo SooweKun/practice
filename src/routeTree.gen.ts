@@ -23,6 +23,7 @@ import { Route as LayoutmainCarzinaIndexImport } from './routes/_layoutmain/carz
 import { Route as LayoutmainCardInfoIndexImport } from './routes/_layoutmain/cardInfo/index'
 import { Route as LayoutmainAuthIndexImport } from './routes/_layoutmain/auth/index'
 import { Route as LayoutmainAromatIndexImport } from './routes/_layoutmain/aromat/index'
+import { Route as LayoutmainAdminIndexImport } from './routes/_layoutmain/admin/index'
 
 // Create/Update Routes
 
@@ -97,6 +98,12 @@ const LayoutmainAromatIndexRoute = LayoutmainAromatIndexImport.update({
   getParentRoute: () => LayoutmainRoute,
 } as any)
 
+const LayoutmainAdminIndexRoute = LayoutmainAdminIndexImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => LayoutmainRoute,
+} as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -114,6 +121,13 @@ declare module '@tanstack/react-router' {
       fullPath: ''
       preLoaderRoute: typeof LayoutmainImport
       parentRoute: typeof rootRoute
+    }
+    '/_layoutmain/admin/': {
+      id: '/_layoutmain/admin/'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof LayoutmainAdminIndexImport
+      parentRoute: typeof LayoutmainImport
     }
     '/_layoutmain/aromat/': {
       id: '/_layoutmain/aromat/'
@@ -191,6 +205,7 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 interface LayoutmainRouteChildren {
+  LayoutmainAdminIndexRoute: typeof LayoutmainAdminIndexRoute
   LayoutmainAromatIndexRoute: typeof LayoutmainAromatIndexRoute
   LayoutmainAuthIndexRoute: typeof LayoutmainAuthIndexRoute
   LayoutmainCardInfoIndexRoute: typeof LayoutmainCardInfoIndexRoute
@@ -204,6 +219,7 @@ interface LayoutmainRouteChildren {
 }
 
 const LayoutmainRouteChildren: LayoutmainRouteChildren = {
+  LayoutmainAdminIndexRoute: LayoutmainAdminIndexRoute,
   LayoutmainAromatIndexRoute: LayoutmainAromatIndexRoute,
   LayoutmainAuthIndexRoute: LayoutmainAuthIndexRoute,
   LayoutmainCardInfoIndexRoute: LayoutmainCardInfoIndexRoute,
@@ -223,6 +239,7 @@ const LayoutmainRouteWithChildren = LayoutmainRoute._addFileChildren(
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '': typeof LayoutmainRouteWithChildren
+  '/admin': typeof LayoutmainAdminIndexRoute
   '/aromat': typeof LayoutmainAromatIndexRoute
   '/auth': typeof LayoutmainAuthIndexRoute
   '/cardInfo': typeof LayoutmainCardInfoIndexRoute
@@ -238,6 +255,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '': typeof LayoutmainRouteWithChildren
+  '/admin': typeof LayoutmainAdminIndexRoute
   '/aromat': typeof LayoutmainAromatIndexRoute
   '/auth': typeof LayoutmainAuthIndexRoute
   '/cardInfo': typeof LayoutmainCardInfoIndexRoute
@@ -254,6 +272,7 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/_layoutmain': typeof LayoutmainRouteWithChildren
+  '/_layoutmain/admin/': typeof LayoutmainAdminIndexRoute
   '/_layoutmain/aromat/': typeof LayoutmainAromatIndexRoute
   '/_layoutmain/auth/': typeof LayoutmainAuthIndexRoute
   '/_layoutmain/cardInfo/': typeof LayoutmainCardInfoIndexRoute
@@ -271,6 +290,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | ''
+    | '/admin'
     | '/aromat'
     | '/auth'
     | '/cardInfo'
@@ -285,6 +305,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | ''
+    | '/admin'
     | '/aromat'
     | '/auth'
     | '/cardInfo'
@@ -299,6 +320,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/_layoutmain'
+    | '/_layoutmain/admin/'
     | '/_layoutmain/aromat/'
     | '/_layoutmain/auth/'
     | '/_layoutmain/cardInfo/'
@@ -342,6 +364,7 @@ export const routeTree = rootRoute
     "/_layoutmain": {
       "filePath": "_layoutmain.jsx",
       "children": [
+        "/_layoutmain/admin/",
         "/_layoutmain/aromat/",
         "/_layoutmain/auth/",
         "/_layoutmain/cardInfo/",
@@ -353,6 +376,10 @@ export const routeTree = rootRoute
         "/_layoutmain/profile/",
         "/_layoutmain/reg/"
       ]
+    },
+    "/_layoutmain/admin/": {
+      "filePath": "_layoutmain/admin/index.jsx",
+      "parent": "/_layoutmain"
     },
     "/_layoutmain/aromat/": {
       "filePath": "_layoutmain/aromat/index.jsx",
